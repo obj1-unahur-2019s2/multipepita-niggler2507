@@ -30,20 +30,53 @@ object sorgo {
 }
 
 object mijo {
- 	method mojarse() {
-		return 15  
-	}
-		
-	method secarse() {
-		return 20
-	}
+ 	var estaSeco = true
+ 	
 	method energiaPorGramo() {
-		if (){
-			
+		if (estaSeco)
+			return 20
+		else {
+			return 15
 		} 
+	}
+	
+	method estaSeco() {
+		estaSeco = true
+	}
+	
+	method estaMojado() {
+		estaSeco = false
 	}
 }
 
 object canelones {
-	method 
+	var tieneSalsa = false
+	var tieneQueso = false
+	
+	method energiaPorGramo() {
+		var energia = 20
+		if (tieneSalsa){
+			energia +=5
+		}
+		if (tieneQueso) {
+			energia +=7
+		}
+		return energia
+	}
+	
+	method ponerSalsa() {
+		tieneSalsa = true
+	}
+	
+	method ponerQueso() {
+		tieneQueso = true
+	}
+	
+	method sacarSalsa() {
+		sacarSalsa = false
+	}
+	
+	method sacarQueso(){
+		sacarSalsa = false
+	}
 }
