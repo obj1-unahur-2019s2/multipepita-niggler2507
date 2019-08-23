@@ -73,10 +73,11 @@ object canelones {
 	}
 	
 	method sacarSalsa() {
-		sacarSalsa = false
+		tieneSalsa = false
 	}
 	
 	method sacarQueso(){
-		sacarSalsa = false
+		tieneQueso = false
 	}
 }
+
